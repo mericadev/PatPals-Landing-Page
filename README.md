@@ -6,6 +6,19 @@ This project is a practice exercise where I rebuilt the website of [Rover]. The 
 
 The original website that inspired this project can be found [here]([link-to-original-website](https://www.rover.com/)).
 
+## About
+
+The rebuilt website is a demonstration of my web development skills and proficiency with Frontend fundamentals. It showcases my ability to recreate existing websites and implement new features.
+
+## Languages and Tools Used
+
+- HTML5
+- CSS3
+- JavaScript
+- Mobile first approach
+- Responsive design
+- Interactive elements
+
 ## Purpose
 
 This project was created solely for educational and practice purposes. It is not affiliated with [Rover] in any way, and the rebuilt website is not intended for commercial use.
