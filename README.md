@@ -18,6 +18,8 @@ The rebuilt website is a demonstration of my web development skills and proficie
 - Mobile first approach
 - Responsive design
 - Interactive elements
+- 
+##Live View [here](https://mericadev.github.io/PatPals-Landing-Page/)
 
 ## Purpose
 
@@ -34,4 +36,4 @@ This project was created solely for educational and practice purposes. It is not
 
 This project is not endorsed by [Rover]. All trademarks, logos, and copyrighted materials belong to their respective owners.
 
-##Live View [here]()
+
