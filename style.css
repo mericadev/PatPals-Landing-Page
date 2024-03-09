@@ -60,7 +60,12 @@ svg {
 
 /*GENERAL STYLES*/
 body {
-	margin: 0 auto;
+    overflow-x: hidden;
+}
+.container {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0 auto;
 }
 
 .flex {
@@ -71,8 +76,7 @@ body {
 
 nav {
 	padding: 2rem;
-	margin: 0 auto;
-	height: 14vh;
+    height: 14vh;
 }
 
 header nav .logo {
@@ -103,8 +107,7 @@ header nav .logo {
 
 .side-bar {
 	height: 100vh;
-	background-color: rgba(0, 255, 255, 0);
-	backdrop-filter: blur(10px);
+	background-color: var(--dark-grey);
 	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 	position: fixed;
 	top: 10;
@@ -139,18 +142,19 @@ header nav .logo {
 
 .side-bar a {
 	width: 100%;
-	color: black;
-	font-weight: 600;
+	color: var(--white-clr);
+	font-weight: 500;
+    letter-spacing: .1em;
 }
 
 .side-bar a:hover {
-	color: var(--white-clr);
+	color: var(--primary-clr-hv);
 }
 
 
 main .hero-content {
 	height: 50vh;
-	box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+	box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
 }
 
 main .hero-content .bg-text {
@@ -189,7 +193,6 @@ main .hero-content .input-field {
 
 main .booking-container {
 	padding: 2rem;
-	margin-top: 3rem;
 }
 
 main .booking-container .service-for-container .service-search {
@@ -237,6 +240,7 @@ main .service-for-all .clients {
 	margin-bottom: 2rem;
 	min-height: 0;
 	max-width: 800px;
+    
 }
 
 main .service-for-all .clients img {
@@ -284,6 +288,10 @@ main .service-for-all .book-sitter-container .book-btn button {
 main .reviews-container {
 	padding: 2rem;
 	margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main .reviews-container .review {
@@ -433,7 +441,7 @@ body {
 }
 
 .side-bar .btns {
-	border-top: 2px solid var(--grey-clr);
+	border-top: 2px solid var(--primary-clr);
 	padding-top: 2rem;
 }
 
@@ -707,7 +715,7 @@ footer .email .privacy-statement p a {
 	}
 
 	.bg-image {
-		height: 120vh;
+		min-height: 120vh;
 		max-width: 100%;
 		margin-top: 2rem;
 	}
@@ -853,7 +861,7 @@ footer .email .privacy-statement p a {
 	}
 
 	.service-for-all {
-		margin-top: 34rem;
+		padding-top: 9rem;
 	}
 
 	.service-for-all .clients {
@@ -876,11 +884,13 @@ footer .email .privacy-statement p a {
 
 	.reviews-container {
 		display: flex;
+        background-color: var(--grey-clr);
 		justify-content: center;
 		margin-top: 4rem;
 		gap: 2rem;
 		margin-right: 0;
 	}
+
 
 	.meet-locals-container {
 		height: 80vh;
@@ -941,4 +951,32 @@ footer .email .privacy-statement p a {
 	.book-sitter-container {
 		width: 1100px;
 	}
+}
+
+@media (max-width: 465px) {
+    footer {
+        min-height: 100vh;
+    }
+
+     footer .patpals-info h5 {
+        margin: 0;
+    }
+    .patpals-info {
+    display: flex !important;
+    flex-direction: column !important; /* Change from 33% 33% 33% to 1fr */
+    justify-content: left;
+    gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 1195px) {
+    .meet-locals-container {
+        min-height: 140vh;
+    }
+    .meet-locals-container .meet-locals-steps {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-items: center !important;
+        align-items: center !important;
+    }
 }
