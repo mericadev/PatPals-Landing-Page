@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>PatPals | Landing Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="top">
+                <a href="index.html">
+                    <img src="assests/PetPals-logo.png" alt="PetPals logo" class="logo">
+                </a>
+                <div class="nav-top-left mobile-hidden">
+                    <ul class="nav-left">      
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                            <a>Search Sitters</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+                            <a>Become a sitter</a>
+                        </li>
+                        <li>
+                            <img src="assests/pets_FILL0_wght400_GRAD0_opsz24.svg">
+                            <a>Our services</a>
+                        </li>
+                    </ul>
+                        <ul class="nav-right">
+                        <li class="sign-up">
+                            <a href="#">Sign up</a>
+                        </li>
+                        <li class="sign-in">
+                            <a href="#">Sign in</a>
+                        </li>
+                        <li class="help">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                            <a href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+               
+                <div class="menu-open desktop-hidden">
+                <a href="#" onclick=toggleSideBar()
+                class="menu-open"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
+            </div>
+            </div>
+            <!--SIDE BAR-->
+            <div class="side-bar">
+                <ul>
+                    <div class="side-bar-top">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                        <a>Search Sitters</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+                        <a>Become a sitter</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180-160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm240 0q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180 160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z"/></svg>
+                        <a>Our services</a>
+                    </li>
+                </div>
+                    <div class="btns">
+                    <li>
+                        <button>Sign up</button>
+                    </li>
+                    <li>
+                        <button>Sign in</button>
+                    </li>
+                    <li>
+                        <button class="btn-help">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                            <span>Help</span>
+                        </button>
+                    </li>
+                </div>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    
+    <main>
+        <!--HERO CONTENT-->
+        <div class="hero-content">
+            <div class="bg-image">
+                <div class="bg-text">
+                    <h1>Loving pet care in your community</h1>
+                    <h3>Book trusted pet sitters and dog walkers.</h3>
+                    <div class="desktop-hidden flex input-field">   
+                    <input type="text" placeholder="Set your neighborhood">
+                </div>
+               
+                </div>
+                <div class="bookings">
+                    <div class="looking-for mobile-hidden">
+                        <p class="service-search">I'm looking for services for my:</p> 
+                        <input type="checkbox"> <span>Dog</span>
+                        <input type="checkbox"> <span>Cat</span>
+                    </div>
+                    <div class="service-need mobile-hidden">
+                        <div class="service-need_types">
+                            <p>For when you're away</p>
+                            <p>For when you're at work</p>
+                        </div>
+                    </div>
+                    
+                    <div class="boarding-container mobile-hidden">
+                        <div class="boarding-days">
+                            <p>Boarding near</p>
+                            <p>For these days</p>
+                        </div>
+                        <div class="enter">
+                        <input type="text" placeholder="Zip code or address">
+                        <input placeholder="Drop off" type="date">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                        <input placeholder="Pick up" type="date">
+                    </div>
+                </div>
+                    <div class="dog-info-container mobile-hidden">
+                        <p class="dog-info_title">My dog size</p>
+                        <div class="dog-info_sizes">
+                            <a href="#">
+                                <p>Small</p>
+                                <p>0-15 lbs</p>
+                            </a>
+                            <a href="#">
+                                <p>Small</p>
+                                <p>0-15 lbs</p>
+                            </a>
+                            <a href="#">
+                                <p>Small</p>
+                                <p>0-15 lbs</p>
+                            </a>
+                            <a href="#">
+                                <p>Small</p>
+                                <p>0-15 lbs</p>
+                            </a>
+                            <button type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dogTraining-container mobile-hidden">
+                    <img src="assests/school_FILL0_wght400_GRAD0_opsz24.svg">
+                    <div class="dog-training">
+                        <p class="dog-training_title">Dog training</p>
+                        <p class="dog-training_info">1-1 virtual dog training through GoodDawg, the newest member of the PatPals family.</p>
+                    </div>
+                    <a href="#">Start your free trial.</a>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--BOOKING CONTENT-->
+        <div class="booking-container">
+            <div class="service-for-container">
+                <h3 class="service-search">I'm looking for services for my:</h3> 
+                <input type="checkbox"> <span>Dog</span>
+                <input type="checkbox"> <span>Cat</span>
+
+                <div class="options-container">
+                    <div class="option-left">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm-160 80h-80v440h80v-440Zm400 440v-440H320v440h320Zm80-440v440h80v-440h-80ZM480-420Z"/></svg></a>
+
+                        <div class="option-left-info">
+                            <h4>Boarding</h4>
+                            <p>in the sitter's home</p>
+                        </div> 
+                    </div>
+                    <div class="option-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                    </div>
+                </div>
+                <div class="options-container">
+                    <div class="option-left">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg></a>
+                        <div class="option-left-info">
+                            <h4>House Sitting</h4>
+                            <p>in your home</p>
+                        </div> 
+                    </div>
+                    <div class="option-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                    </div>
+                </div>
+                <div class="options-container">
+                    <div class="option-left">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M720-240q-33 0-56.5-23.5T640-320q0-33 23.5-56.5T720-400q33 0 56.5 23.5T800-320q0 33-23.5 56.5T720-240ZM560-80v-23q0-44 44-70.5T720-200q72 0 116 26.5t44 70.5v23H560Zm120-400h-80v-200q0-51-36-85.5T480-800q-48 0-84 34.5T360-680v400q0 48 36 84t84 36v80q-85 0-142.5-57.5T280-280v-400q0-85 57.5-142.5T480-880q85 0 142.5 57.5T680-680v200Zm-200-80q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0 80Zm-80 160q0 33 23.5 56.5T480-240q33 0 56.5-23.5T560-320q0-33-23.5-56.5T480-400q-33 0-56.5 23.5T400-320Zm80 40q-18 0-29-12.5T440-320q0-15 11-27.5t29-12.5q18 0 29 11t11 29q0 15-11 27.5T480-280Z"/></svg></a>
+                        <div class="option-left-info">
+                            <h4>Drop-ins</h4>
+                            <p>in your home</p>
+                        </div> 
+                    </div>
+                    <div class="option-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                    </div>
+                </div>
+                <div class="options-container">
+                    <div class="option-left">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z"/></svg></a>
+                        <div class="option-left-info">
+                            <h4>Doggy Day Care</h4>
+                            <p>in the sitter's home</p>
+                        </div> 
+                    </div>
+                    <div class="option-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                    </div>
+                </div>
+                <div class="options-container">
+                    <div class="option-left">
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M194-80v-395h80v315h280v-193l105-105q29-29 45-65t16-77q0-40-16.5-76T659-741l-25-26-127 127H347l-43 43-57-56 67-67h160l160-160 82 82q40 40 62 90.5T800-600q0 57-22 107.5T716-402l-82 82v240H194Zm197-187L183-475q-11-11-17-26t-6-31q0-16 6-30.5t17-25.5l84-85 124 123q28 28 43.5 64.5T450-409q0 40-15 76.5T391-267Z"/></svg></a>
+                        <div class="option-left-info">
+                            <h4>Dog Walking</h4>
+                            <p>in your neighborhood</p>
+                        </div> 
+                    </div>
+                    <div class="option-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+                    </div>
+                </div>
+            </div>
+            <!--MOBILE HIDDEN-->
+           
+    </div>
+
+    <div class="service-for-all">
+        <h2>Service for every dog and cat</h2>
+        <div class="clients desktop-hidden">
+            <img src="assests/cat-client.jpg" class="desktop-hidden" alt="client">
+            <img src="assests/dog client.jpg" class="desktop-hidden" alt="client">
+        </div>
+        <div class="desktop-flex">
+        <div class="service-needs_options">
+            <div class="option flex">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm-160 80h-80v440h80v-440Zm400 440v-440H320v440h320Zm80-440v440h80v-440h-80ZM480-420Z"/></svg>
+                </div>
+                <div class="option-info flex-group">
+                    <h4>Boarding</h4>
+                    <p>Your pets stay overnight in your sitter’s home. They’ll be treated like part of the family in a comfortable environment.</p>
+                </div>
+                
+            </div>
+            <div class="option flex">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                <div class="option-info flex-group">
+                    <h4>House Sitting</h4>
+                    <p>Your sitter takes care of your pets and your home. Your pets will get all the attention they need without leaving home.</p>
+                </div>
+            </div>
+            <div class="option flex">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M720-240q-33 0-56.5-23.5T640-320q0-33 23.5-56.5T720-400q33 0 56.5 23.5T800-320q0 33-23.5 56.5T720-240ZM560-80v-23q0-44 44-70.5T720-200q72 0 116 26.5t44 70.5v23H560Zm120-400h-80v-200q0-51-36-85.5T480-800q-48 0-84 34.5T360-680v400q0 48 36 84t84 36v80q-85 0-142.5-57.5T280-280v-400q0-85 57.5-142.5T480-880q85 0 142.5 57.5T680-680v200Zm-200-80q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0 80Zm-80 160q0 33 23.5 56.5T480-240q33 0 56.5-23.5T560-320q0-33-23.5-56.5T480-400q-33 0-56.5 23.5T400-320Zm80 40q-18 0-29-12.5T440-320q0-15 11-27.5t29-12.5q18 0 29 11t11 29q0 15-11 27.5T480-280Z"/></svg>
+                <div class="option-info flex-group">
+                    <h4>Dog Walking</h4>
+                    <p>Your dog gets a walk around your neighborhood. Perfect for busy days and dogs with extra energy to burn.</p>
+                </div>
+            </div>
+            <div class="option flex">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z"/></svg>
+                <div class="option-info flex-group">
+                    <h4>Doggy Day Care</h4>
+                    <p>Your dog spends the day at your sitter’s home. Drop them off in the morning and pick up a happy pup in the evening.</p>
+                </div>
+            </div>
+            <div class="option flex">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M194-80v-395h80v315h280v-193l105-105q29-29 45-65t16-77q0-40-16.5-76T659-741l-25-26-127 127H347l-43 43-57-56 67-67h160l160-160 82 82q40 40 62 90.5T800-600q0 57-22 107.5T716-402l-82 82v240H194Zm197-187L183-475q-11-11-17-26t-6-31q0-16 6-30.5t17-25.5l84-85 124 123q28 28 43.5 64.5T450-409q0 40-15 76.5T391-267Z"/></svg>
+                <div class="option-info flex-group">
+                    <h4>Drop in visits</h4>
+                    <p>Your sitter drops by your home to play with your pets, offer food, and give potty breaks or clean the litter box.</p>
+                </div>
+            </div>
+            <div class="option flex">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z"/></svg>
+                <div class="option-info flex-group">
+                    <h4>Dog Training through GoodPup</h4>
+                    <p>Private, virtual dog training through GoodPup. Train from the comfort of your home through 1-1 video chat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="book-sitter-container">
+            <div class="book flex-only">
+                <svg xmlns="http://www.w3.org/2000/svg" height="44" viewBox="0 -960 960 960" width="44"><path d="M640-440 474-602q-31-30-52.5-66.5T400-748q0-55 38.5-93.5T532-880q32 0 60 13.5t48 36.5q20-23 48-36.5t60-13.5q55 0 93.5 38.5T880-748q0 43-21 79.5T807-602L640-440Zm0-112 109-107q19-19 35-40.5t16-48.5q0-22-15-37t-37-15q-14 0-26.5 5.5T700-778l-60 72-60-72q-9-11-21.5-16.5T532-800q-22 0-37 15t-15 37q0 27 16 48.5t35 40.5l109 107ZM280-220l278 76 238-74q-5-9-14.5-15.5T760-240H558q-27 0-43-2t-33-8l-93-31 22-78 81 27q17 5 40 8t68 4q0-11-6.5-21T578-354l-234-86h-64v220ZM40-80v-440h304q7 0 14 1.5t13 3.5l235 87q33 12 53.5 42t20.5 66h80q50 0 85 33t35 87v40L560-60l-280-78v58H40Zm80-80h80v-280h-80v280Zm520-546Z"/></svg>
+                <p class="book-title">Book with pet sitters you can <span>trust</span></p>
+            </div>
+            <div class="sitter-checks">
+                <div class="background flex-only">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                <p>All sitters pass a background check</p>
+            </div>
+            <div class="personal-info flex-only">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                <p>All sitters provide a detailed profile and personal information</p>
+            </div>
+            <div class="approved flex-only">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/></svg>
+                <p>All sitters approved by our team of sitter specialists</p>
+            </div>
+            </div>
+            <div class="book-btn">
+                <button>Book a local sitter</button>
+            </div>
+            <p class="back-up">All services booked on PatPals are backed by the <a href="#">
+                PatPals Guarantee, 24/7 support</a> and <a href="#">reservation protection</a>
+            </p>
+        </div>
+    </div>
+    </div>
+
+        <div class="reviews-container">
+            <div class="client-one">
+                <img src="assests/review-one.jpg" alt="client">
+                <div class="review">
+                    <h5>I was nervous to leave Sam with strangers, but my worries quickly faded. Going forward PatPals will be my first choice for pet sitting. <span>- Molly S.</span> </h5>
+                </div>
+                
+            </div>
+            <div class="client-two">
+                <img src="assests/review-2.jpg" alt="client">
+                <div class="review">
+                    <h5>My sitter took great care of my cat, above and beyond my expectations. I would book with PatPals again in a heartbeat!  <span>- Danielle H.</span></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="meet-locals-container">
+            <h2>Meet local sitters who will treat your pets like family</h2>
+            <div class="meet-locals-steps">
+                <div class="step">
+                    <img src="assests/undraw_Search_re_x5gq.png" class="search-step" alt="online search illustration">
+                    <h5>1. Search</h5>
+                    <p>Read verified reviews by pet parents like you and choose a sitter who’s a great match for you and your pets.</p>
+                </div>
+                <div class="step">
+                    <img src="assests/online-payment-outline.png" class="mobile-pay" alt="phone pay illustration">
+                    <h5>2. Book & pay</h5>
+                    <p>No cash or checks needed—we make it simple to book and make secured payments through our website or app.</p>
+                </div>
+                <div class="step">
+                    <img src="assests/Meditation-rafiki.png" alt="relaxation illustration" class="relax-step">
+                    <h5>3. Relax</h5>
+                    <p>Your pets are in great hands with a loving sitter. Plus, your booking is backed by
+                        <a href="#">24/7 support</a> and <a href="#">PatPals Guarantee</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="patpals-info">
+        <div class="learn-more">
+            <ul>
+                <li><h5>Learn more</h5></li>
+                <li><a href="#">Read our blog</a></li>
+                <li><a href="#">PatPals Q&A</a></li>
+                <li><a href="#">PatPals shop</a></li>
+                <li><a href="#">Safety</a></li>
+            </ul>
+        </div>
+        <div class="about-us">
+            <ul>
+                <li><h5>About PatPals</h5></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Statement</a></li>
+            <li><a href="#">Terms of service</a></li>
+        </ul>
+        </div>
+        <div class="help-center">
+            <ul>
+                <li><h5>Need help?</h5></li>
+                <li><a href="#">Help center</a></li>
+            </ul>
+        </div>
+    </div>
+        <div class="email">
+            <h5>Get cute kittens in your inbox</h5>
+            <div class="email-enter">
+                <input type="email">
+                <button>Submit</button>
+            </div>
+            <div class="privacy-statement"><p>By providing my e-mail address, I consent to receive marketing communications from PatPals.com and its affiliates. <a href="#">Privacy Statement</a></p></div>
+        </div>
+        <div class="social-media">
+            <a href="#"><img src="assests/facebook (1).png" alt="facebook icon"></a>
+            <a href="#"><img src="assests/instagram.png" alt="instagram icon"></a>
+            <a href="#"><img src="assests/pinterest.png" alt="pinterest icon"></a>
+        </div>
+    </footer>
+   
+   <script>
+
+        function toggleSideBar() {
+            const sideBar = document.querySelector('.side-bar');
+            if (sideBar.style.display === 'flex') {
+            sideBar.style.display = 'none';
+                } else {
+            sideBar.style.display = 'flex';
+             }
+            }
+        
+
+    </script>
+</body>
+</html>

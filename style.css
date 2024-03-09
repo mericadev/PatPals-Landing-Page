@@ -1,0 +1,944 @@
+/*CSS RESET*/
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+}
+
+#root, #__next {
+	isolation: isolate;
+}
+
+/*THEME STYLES*/
+:root {
+	--primary-clr: #083AA9;
+	--primary-clr-hv: #021b50;
+	--peach-clr: #f3e6d3;
+	--grey-clr: #9DB2BF;
+	--dark-grey: #607274;
+	--text-grey: #3b4344;
+	--white-clr: #F3F3F3;
+	--black-clr: black;
+	--friendly-font: "Madimi One", sans-serif;
+	--primary-font: "Poppins", sans-serif;
+}
+
+/*SVG STYLES*/
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0,
+ 'wght' 400,
+ 'GRAD' 0,
+ 'opsz' 24;
+}
+
+svg {
+	fill: var(--primary-clr);
+	width: 30px;
+	min-width: 30px;
+	height: 30px;
+}
+
+/*GENERAL STYLES*/
+body {
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+nav {
+	padding: 2rem;
+	margin: 0 auto;
+	height: 14vh;
+}
+
+header nav .logo {
+	width: 150px;
+}
+
+.mobile-hidden {
+	display: none;
+}
+
+.top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.top ul li {
+	list-style: none;
+	display: flex;
+	margin-right: 1rem;
+}
+
+.side-bar {
+	height: 100vh;
+	background-color: rgba(0, 255, 255, 0);
+	backdrop-filter: blur(10px);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 10;
+	right: 0;
+	width: 300px;
+	z-index: 999;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 1rem;
+	display: none;
+}
+
+.side-bar li {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	gap: .5rem;
+	margin: 1rem;
+}
+
+.side-bar li button {
+	width: 100%;
+}
+
+.side-bar li .btn-help {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: .5rem;
+}
+
+.side-bar a {
+	width: 100%;
+	color: black;
+	font-weight: 600;
+}
+
+.side-bar a:hover {
+	color: var(--white-clr);
+}
+
+
+main .hero-content {
+	height: 50vh;
+	box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+}
+
+main .hero-content .bg-text {
+	color: white;
+	line-height: 1.3;
+	padding: 2rem;
+	letter-spacing: .1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main .hero-content .bg-text h1 {
+	text-align: center;
+}
+
+main .hero-content .bg-image {
+	min-height: 50vh;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("./assests/Untitled design.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+main .hero-content .input-field {
+	margin-top: 1.5rem;
+	font-size: .9em;
+	width: 100%;
+}
+
+main .booking-container {
+	padding: 2rem;
+	margin-top: 3rem;
+}
+
+main .booking-container .service-for-container .service-search {
+	margin-bottom: 2rem;
+}
+
+main .booking-container .service-for-container span {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+main .options-container {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+main .options-container .option-left {
+	display: flex;
+	gap: 1.2rem;
+}
+
+main .options-container .option-left .option-left-info {
+	display: flex;
+	flex-direction: column;
+}
+
+main .service-for-all h2 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 4rem;
+	font-size: 2em;
+}
+
+main .service-for-all .option {
+	gap: 1.2rem;
+	width: 90%;
+}
+
+main .service-for-all .clients {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 1rem;
+	margin-bottom: 2rem;
+	min-height: 0;
+	max-width: 800px;
+}
+
+main .service-for-all .clients img {
+	width: 300px;
+	height: 280px;
+	border-radius: 10px;
+}
+
+main .service-for-all .flex-only {
+	display: flex;
+}
+
+main .service-for-all .book-sitter-container {
+	margin-bottom: 2rem;
+	padding: 2rem;
+}
+
+main .service-for-all .book-sitter-container .book {
+	border: 1px solid var(--dark-grey);
+	padding-top: 1.5rem;
+	padding-left: 1rem;
+	justify-content: center;
+	gap: .5rem;
+	align-items: center;
+}
+
+main .service-for-all .book-sitter-container .sitter-checks {
+	border: 1px solid var(--dark-grey);
+	border-radius: 0 0 6px 6px;
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	padding-left: 1.5rem;
+}
+
+main .service-for-all .book-sitter-container .sitter-checks p {
+	margin-bottom: 1rem;
+}
+
+main .service-for-all .book-sitter-container .book-btn button {
+	width: 100%;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+}
+
+main .reviews-container {
+	padding: 2rem;
+	margin-bottom: 4rem;
+}
+
+main .reviews-container .review {
+	background-color: white;
+	padding: 1rem;
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+
+main .reviews-container .client-one img,
+    main .reviews-container .client-two img {
+	height: 300px;
+	width: 100%;
+	border-radius: 10px 10px 0 0;
+}
+
+main .reviews-container .client-one, main .reviews-container .client-two {
+	max-width: 500px;
+	min-width: 250px;
+	margin-right: 2rem;
+}
+
+main .reviews-container .review {
+	border-bottom: 1px solid;
+}
+
+main .meet-locals-container {
+	padding: 2rem;
+}
+
+main .meet-locals-steps {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+main .step {
+	width: 450px;
+	background-color: var(--grey-clr);
+	border-radius: 6px;
+	box-shadow: rgba(99, 99, 99, 0.5) 0px 2px 8px 0px;
+	margin-bottom: 4rem;
+	margin-top: 3rem;
+	text-align: center;
+	padding: 2rem;
+}
+
+main .step .search-step {
+	margin-left: 1rem;
+	margin-bottom: 2rem;
+}
+
+main .step .mobile-pay {
+	width: 250px;
+	top: -100px;
+	margin-bottom: -4rem;
+}
+
+main .step .relax-step {
+	width: 170px;
+}
+
+main .step img {
+	position: relative;
+	width: 200px;
+	top: -80px;
+}
+
+main h5 {
+	margin-top: -3rem;
+}
+
+footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+}
+
+footer ul li {
+	list-style: none;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+footer .patpals-info {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	justify-content: left;
+}
+
+footer .email {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+
+footer .email .email-enter {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+footer .email .email-enter input {
+	width: 100%;
+	max-width: 350px;
+}
+
+footer .email .email-enter button {
+	width: 20%;
+}
+
+footer .email p {
+	margin-bottom: 1rem;
+}
+
+footer .social-media {
+	display: flex;
+	flex-direction: row;
+	gap: .5rem;
+	padding: 2rem;
+}
+
+/*MAIN STYLES*/
+body {
+	font-family: var(--primary-font);
+	overflow-x: hidden;
+}
+
+.side-bar ul li button {
+	border: 2px solid var(--primary-clr);
+	border-radius: 10px;
+	padding: .3rem;
+	font-weight: 600;
+	transition: .2s;
+}
+
+.side-bar ul li button:hover {
+	background-color: var(--primary-clr);
+	cursor: pointer;
+}
+
+.side-bar .btns {
+	border-top: 2px solid var(--grey-clr);
+	padding-top: 2rem;
+}
+
+.side-bar .side-bar-top {
+	padding-bottom: 2rem;
+}
+
+main .hero-content h1 {
+	font-weight: 900;
+	font-size: 3rem;
+	margin-bottom: .5rem;
+}
+
+main .hero-content h3 {
+	font-family: var(--primary-font);
+	font-weight: 600;
+}
+
+main .hero-content .input-field input {
+	padding-top: .8rem;
+	padding-bottom: .8rem;
+	padding-left: 2.5rem;
+	width: 100%;
+	background-image: url(assests/location_on_FILL0_wght400_GRAD0_opsz24.svg);
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: 7%;
+	position: relative;
+	border: none;
+	border-radius: 10px;
+	font-family: var(--primary-font);
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+main .booking-container .service-for-container input[type=checkbox] {
+	transform: scale(2.5);
+}
+
+main .options-container {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: .8rem;
+	padding-bottom: .8rem;
+	background-color: var(--grey-clr);
+	border-radius: 6px;
+	box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+	transition: .2s;
+}
+
+main .options-container:hover {
+	background-color: var(--dark-grey);
+}
+
+main .options-container .option-left-info {
+	line-height: 1.6em;
+}
+
+main .options-container .option-left-info p {
+	font-size: .8em;
+	font-weight: 500;
+}
+
+main .service-for-all .clients img {
+	transition: .2s ease-in;
+}
+
+main .service-for-all .clients img:hover {
+	opacity: .7;
+}
+
+main .service-for-all .service-needs_options {
+	padding: 2rem;
+}
+
+main .service-for-all .service-needs_options:hover {
+	cursor: pointer;
+}
+
+main .service-for-all .service-needs_options .option-info
+p {
+	font-size: .9em;
+	line-height: 1.6em;
+}
+
+main .service-for-all .service-needs_options h4 {
+	font-weight: 600;
+}
+
+main .service-for-all .book-sitter-container .book-btn button {
+	background: var(--primary-clr);
+	color: var(--white-clr);
+	font-size: 1.3em;
+	font-weight: 800;
+	border: none;
+	padding: 1rem;
+	border-radius: 10px;
+	transition: .2s ease-in-out;
+}
+
+main .service-for-all .book-sitter-container .book-btn button:hover {
+	background-color: var(--primary-clr-hv);
+	cursor: pointer;
+}
+
+main .service-for-all .book-sitter-container .book {
+	background-color: var(--grey-clr);
+	padding-bottom: .4rem;
+}
+
+main .service-for-all .book-sitter-container .book-title {
+	font-weight: 500;
+	font-size: 1.1em;
+}
+
+main .service-for-all .book-sitter-container .book-title span {
+	font-weight: 700;
+}
+
+main .service-for-all .book-sitter-container p.back-up {
+	font-size: .8em;
+	width: 80%;
+	margin-left: 2rem;
+}
+
+main .service-for-all .book-sitter-container p.back-up a {
+	color: var(--primary-clr);
+}
+
+main .reviews-container img {
+	transition: .2s;
+}
+
+main .reviews-container img:hover {
+	opacity: .7;
+	cursor: pointer;
+}
+
+main .reviews-container .review {
+	padding-top: 5rem;
+}
+
+main .reviews-container .review h5 {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+main .reviews-container .review h5 span {
+	color: var(--dark-grey);
+}
+
+main .meet-locals-container h2 {
+	font-size: 2em;
+	text-align: center;
+	line-height: 1.2em;
+}
+
+main .meet-locals-container h5 {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+main .meet-locals-container p {
+	font-weight: 500;
+	font-size: .9em;
+}
+
+main .meet-locals-container a {
+	color: var(--primary-clr);
+}
+
+footer {
+	background-color: var(--grey-clr);
+	padding: 2rem;
+}
+
+footer .patpals-info a {
+	color: black;
+	font-size: .9em;
+	font-weight: 500;
+}
+
+footer .patpals-info a:hover {
+	color: var(--primary-clr-hv);
+	text-decoration: underline;
+}
+
+footer .patpals-info h5 {
+	font-size: 1.5em;
+	font-weight: 600;
+	line-height: 1.2em;
+	margin-bottom: 2rem;
+}
+
+footer .email h5 {
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+footer .email .email-enter input {
+	border: none;
+	padding: .6rem;
+	border-radius: 10px;
+}
+
+footer .email .email-enter button {
+	border: none;
+	padding: .6rem;
+	border-radius: 10px;
+	background: var(--primary-clr);
+	color: var(--white-clr);
+	font-weight: 600;
+	width: 30%;
+}
+
+footer .email .email-enter button:hover {
+	background: var(--primary-clr-hv);
+	cursor: pointer;
+}
+
+footer .email .privacy-statement p {
+	font-size: .8em;
+}
+
+footer .email .privacy-statement p a {
+	color: var(--primary-clr);
+	text-decoration: underline;
+}
+
+/*RESPONSIVE STYLES*/
+
+@media screen and (min-width: 800px) {
+	.mobile-hidden {
+		display: inline;
+	}
+
+	nav .top {
+		display: flex;
+		flex-direction: row;
+		align-items: first baseline;
+	}
+
+	nav .top .logo {
+		min-width: 150px;
+	}
+
+	nav .top a {
+		text-decoration: none;
+	}
+
+	nav .top .nav-top-left {
+		display: flex;
+	}
+
+	nav .top .nav-top-left ul li {
+		margin-left: 1rem;
+	}
+
+	nav .top .nav-top-left ul li a {
+		color: var(--text-grey);
+		font-weight: 500;
+	}
+
+	nav .top .nav-top-left ul li a:hover {
+		color: black;
+		cursor: pointer;
+	}
+
+	.desktop-hidden {
+		display: none;
+	}
+
+	.bg-image {
+		height: 120vh;
+		max-width: 100%;
+		margin-top: 2rem;
+	}
+
+	.hero-content {
+		height: 120vh;
+		margin-bottom: 10rem;
+	}
+
+	.nav-left ul .sign-up,
+  .nav-left ul .sign-in,
+  .nav-left ul .help {
+		display: none;
+	}
+
+	.bookings {
+		background-color: var(--white-clr);
+		padding: 2rem;
+	}
+
+	.service-need .service-need_types {
+		background-color: var(--grey-clr);
+		padding: .5rem;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.service-need .service-need_types p {
+		font-weight: 600;
+		color: var(--text-grey);
+	}
+
+	.looking-for {
+		display: flex;
+		gap: .6rem;
+		margin-bottom: 1rem;
+		width: 100%;
+	}
+
+	.looking-for input[type="checkbox"] {
+		width: 25px;
+      /* Adjust the width */
+		height: 25px;
+      /* Adjust the height */;
+	}
+
+	.looking-for p {
+		font-weight: 600;
+		font-size: 1em;
+		color: var(--text-grey);
+	}
+
+	.looking-for span {
+		font-size: .9em;
+		font-weight: 500;
+		color: var(--text-grey);
+	}
+
+	.boarding-container .enter {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+		gap: 1rem;
+	}
+
+	.boarding-container .enter input {
+		border: 1px solid var(--dark-grey);
+		font-size: .9em;
+		padding: .3rem;
+	}
+
+	.boarding-container .boarding-days {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1rem;
+	}
+
+	.boarding-container .boarding-days p {
+		font-weight: 600;
+		color: var(--text-grey);
+	}
+
+	.dog-info-container .dog-info_title {
+		font-weight: 600;
+		color: var(--text-grey);
+	}
+
+	.dog-info-container .dog-info_sizes {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.dog-info-container .dog-info_sizes button {
+		background: var(--primary-clr);
+		width: 30%;
+		border: none;
+		border-radius: 8px;
+		color: var(--white-clr);
+		font-weight: 700;
+		transition: .2s;
+	}
+
+	.dog-info-container .dog-info_sizes button:hover {
+		background-color: var(--primary-clr-hv);
+	}
+
+	.dog-info-container .dog-info_sizes a {
+		border: 2px solid var(--grey-clr);
+		border-radius: 5px;
+		color: var(--text-grey);
+		font-size: .9em;
+		font-weight: 500;
+		padding: .5rem;
+		text-decoration: none;
+	}
+
+	.dog-info-container .dog-info_sizes a:hover {
+		border: 3px solid var(--text-grey);
+	}
+
+	.dogTraining-container {
+		background-color: var(--white-clr);
+		display: flex;
+		gap: 1rem;
+		margin-top: 2rem;
+		padding: 2rem;
+		max-width: 628px;
+	}
+
+	.dogTraining-container a {
+		color: var(--primary-clr);
+	}
+
+	.dogTraining-container .dog-training_title {
+		font-weight: 700;
+	}
+
+	.dogTraining-container .dog-training_info {
+		color: var(--text-grey);
+		font-size: .9em;
+	}
+
+	.service-for-all {
+		margin-top: 34rem;
+	}
+
+	.service-for-all .clients {
+		height: 0;
+		width: 0;
+	}
+
+	.service-for-all .clients img {
+		display: none;
+	}
+
+	.booking-container {
+		display: none;
+	}
+
+	.service-needs_options,
+  .book-sitter-container {
+		margin-top: -7rem;
+	}
+
+	.reviews-container {
+		display: flex;
+		justify-content: center;
+		margin-top: 4rem;
+		gap: 2rem;
+		margin-right: 0;
+	}
+
+	.meet-locals-container {
+		height: 80vh;
+		margin-bottom: 8rem;
+	}
+
+	.meet-locals-container h2 {
+		margin-bottom: 4rem;
+	}
+
+	.meet-locals-container .meet-locals-steps {
+		display: flex;
+		flex-direction: row !important;
+		flex-grow: 0;
+      /* Prevents the item from growing */
+		flex-shrink: 0;
+	}
+
+	footer {
+		display: flex;
+		flex-direction: column;
+		padding-left: 8rem;
+		padding-right: 8rem;
+	}
+
+	footer .email h5 {
+		text-align: center;
+	}
+
+	footer .privacy-statement p {
+		text-align: center;
+	}
+
+	footer .social-media {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 620px) {
+	.service-for-all .clients {
+		padding: 2rem;
+	}
+
+	.service-for-all .clients img {
+		display: flex;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.desktop-flex {
+		display: flex;
+		flex: 1fr 1fr;
+		padding: 0;
+	}
+
+	.book-sitter-container {
+		width: 1100px;
+	}
+}
