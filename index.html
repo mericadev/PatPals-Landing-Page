@@ -15,9 +15,18 @@
     <header>
         <nav>
             <div class="top">
-                <a href="index.html">
-                    <img src="assests/PetPals-logo.png" alt="PetPals logo" class="logo">
-                </a>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/PetPals-logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="menu-open">
+                    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" onclick=toggleSideBar()>
+                        <span class="sr-only">MENU</span>
+                    </button>
+                <!--<a href="#" onclick=toggleSideBar()
+                class="menu-open"></a>-->
+            </div>
                 <div class="nav-top-left mobile-hidden">
                     <ul class="nav-left">      
                         <li>
@@ -29,7 +38,7 @@
                             <a>Become a sitter</a>
                         </li>
                         <li>
-                            <img src="assests/pets_FILL0_wght400_GRAD0_opsz24.svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M180-475q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180-160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm240 0q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29Zm180 160q-42 0-71-29t-29-71q0-42 29-71t71-29q42 0 71 29t29 71q0 42-29 71t-71 29ZM266-75q-45 0-75.5-34.5T160-191q0-52 35.5-91t70.5-77q29-31 50-67.5t50-68.5q22-26 51-43t63-17q34 0 63 16t51 42q28 32 49.5 69t50.5 69q35 38 70.5 77t35.5 91q0 47-30.5 81.5T694-75q-54 0-107-9t-107-9q-54 0-107 9t-107 9Z"/></svg>
                             <a>Our services</a>
                         </li>
                     </ul>
@@ -46,11 +55,6 @@
                         </li>
                     </ul>
                 </div>
-               
-                <div class="menu-open desktop-hidden">
-                <a href="#" onclick=toggleSideBar()
-                class="menu-open"><svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 -960 960 960" width="40"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a>
-            </div>
             </div>
             <!--SIDE BAR-->
             <div class="side-bar">
@@ -97,7 +101,9 @@
                     <h1>Loving pet care in your community</h1>
                     <h3>Book trusted pet sitters and dog walkers.</h3>
                     <div class="desktop-hidden flex input-field">   
-                    <input type="text" placeholder="Set your neighborhood">
+                        <div class="book-btn">
+                            <button type="button">Find a local sitter</button>
+                        </div>
                 </div>
                
                 </div>
@@ -308,7 +314,7 @@
             </div>
             </div>
             <div class="book-btn">
-                <button>Book a local sitter</button>
+                <button type="button">Book a local sitter</button>
             </div>
             <p class="back-up">All services booked on PatPals are backed by the <a href="#">
                 PatPals Guarantee, 24/7 support</a> and <a href="#">reservation protection</a>
@@ -318,17 +324,17 @@
     </div>
 
         <div class="reviews-container">
+            <h2>What pet parents are saying</h2>
             <div class="client-one">
                 <img src="assests/review-one.jpg" alt="client">
                 <div class="review">
-                    <h5>I was nervous to leave Sam with strangers, but my worries quickly faded. Going forward PatPals will be my first choice for pet sitting. <span>- Molly S.</span> </h5>
+                    <p>I was nervous to leave Sam with strangers, but my worries quickly faded. Going forward PatPals will be my first choice for pet sitting. <span>- Molly S.</span></p>
                 </div>
-                
             </div>
             <div class="client-two">
                 <img src="assests/review-2.jpg" alt="client">
                 <div class="review">
-                    <h5>My sitter took great care of my cat, above and beyond my expectations. I would book with PatPals again in a heartbeat!  <span>- Danielle H.</span></h5>
+                    <p>My sitter took great care of my cat, above and beyond my expectations. I would book with PatPals again in a heartbeat!  <span>- Danielle H.</span></p>
                 </div>
             </div>
         </div>
@@ -354,9 +360,11 @@
                     </p>
                 </div>
             </div>
-        </div>
+            <div class="book-btn flex">
+                <button type="button">Find out more</button>
+            </div>
+        </div>  
     </main>
-
     <footer>
         <div class="patpals-info">
         <div class="learn-more">
@@ -388,8 +396,8 @@
         <div class="email">
             <h5>Get cute kittens in your inbox</h5>
             <div class="email-enter">
-                <input type="email">
-                <button>Submit</button>
+                <input type="email" placeholder="Enter email">
+                <button type="submit">Submit</button>
             </div>
             <div class="privacy-statement"><p>By providing my e-mail address, I consent to receive marketing communications from PatPals.com and its affiliates. <a href="#">Privacy Statement</a></p></div>
         </div>
